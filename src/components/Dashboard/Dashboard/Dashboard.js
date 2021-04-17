@@ -65,8 +65,8 @@ const Dashboard = () => {
                         <tbody>
                             {ordersList.map(list =>
                                 <tr className="mt-3" key={list._id}>
-                                    <td className="text-dark py-2 px-3">{loggedInUser.name}</td>
-                                    <td className="text-dark py-2 px-3">{loggedInUser.email}</td>
+                                    <td className="text-dark py-2 px-3">{list.name}</td>
+                                    <td className="text-dark py-2 px-3">{list.email}</td>
                                     <td className="text-dark py-2 px-3">{list.cName}</td>
                                     <td className="text-dark py-2 px-3">{(new Date(list.orderTime).toDateString('dd/MM/yyyy'))}</td>
                                     <td className="text-dark py-2 px-3">{list.status}</td>
