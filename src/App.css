@@ -1,0 +1,9 @@
+.btn-brand{
+  background-image: linear-gradient(75deg, #19D3AE, #0FCFEC);
+  border-color: transparent;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.dashboard-bd{
+  backgroundColor: "#ADD8E6";
+}
