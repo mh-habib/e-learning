@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faSignOutAlt, faHome, faThLarge, faThList, faUsersCog } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faSignOutAlt, faHome, faThLarge, faThList, faUsersCog, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { UserContext } from '../../../App';
 
 const Sidebar = () => {
@@ -43,11 +43,15 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
+                    <Link to="/contactMessage" className="text-white">
+                        <FontAwesomeIcon icon={faEnvelope} /> <span>Contact Message</span>
+                    </Link>
+                </li>                
+                <li>
                     <Link to="/" className="text-white">
                         <FontAwesomeIcon icon={faHome} /> <span>Home</span>
                     </Link>
-                </li>
-                
+                </li>                
             </ul>
             <div>
                 <Link to="/" className="text-white"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>

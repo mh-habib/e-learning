@@ -14,6 +14,7 @@ import Book from './components/Book/Book/Book';
 import BookingList from './components/Book/BookingList/BookingList';
 import Review from './components/Book/Review/Review';
 import Login from './components/Login/Login';
+import ContactMsgList from './components/Dashboard/ContactMsgList/ContactMsgList';
 
 export const UserContext = createContext();
 
@@ -49,6 +50,9 @@ function App() {
         </Route>
         <Route path="/review">
           <Review></Review>
+        </Route>
+        <Route path="/contactMessage">
+          <ContactMsgList></ContactMsgList>
         </Route>
         <Route path="/login">
           <Login></Login>

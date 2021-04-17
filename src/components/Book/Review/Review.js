@@ -50,7 +50,7 @@ const Review = () => {
                                 <td className="w-100"><input className="form-control py-3 pr-3 mt-2" name="designation" placeholder="Designation" {...register("designation")} /></td>
                             </tr>
                             <tr>
-                                <td className="w-100"><textarea className="form-control py-3 pr-3 mt-2" placeholder=""name="message" placeholder="Write a Review" {...register("message")} /></td>
+                                <td className="w-100"><textarea className="form-control py-3 pr-3 mt-2" name="message" placeholder="Write a Review" {...register("message")} /></td>
                             </tr>
                             
                             <tr>
