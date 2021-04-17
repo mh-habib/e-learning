@@ -1,18 +1,19 @@
 import React from 'react';
+import './Testimonial.css'
 
 const Testimonial = (props) => {
-    const {message, name, designation, img} = props.review;
+    const {reviewerName, reviewerMessage, reviewerDesignation, image} = props.review;
     return (
-        <div className="card shadow-sm">            
-            <div className="card-footer d-flex  align-items-center">
-                <img className="mx-3" src={img} alt="" width="60"/>
+        <div className="card card col-md-4 col-sm-12 card-body card shadow-sm">            
+            <div className="d-flex  align-items-center">
+                <img className="mx-3 reviewerImage" src={image} alt="" width="60"/>
                 <div>
-                    <h6 className="text-primary">{name}</h6>
-                    <p className="m-0">{designation}</p>
+                    <h6 className="text-primary">{reviewerName}</h6>
+                    <p className="m-0">{reviewerDesignation}</p>
                 </div>
             </div>
-            <div className="card-body">
-                <p className="card-text text-center">{message}</p>
+            <div className="card-footer">
+                <p className="card-text text-center">{reviewerMessage}</p>
             </div>
        </div>
     );

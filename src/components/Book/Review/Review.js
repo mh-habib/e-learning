@@ -1,21 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
+import { UserContext } from '../../../App';
 import BookingSidebar from '../BookingSidebar/BookingSidebar';
 
 const containerStyle = {
     backgroundColor: "#ADD8E6",
 }
 const Review = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const { register, handleSubmit, errors } = useForm();
 
     const onSubmit = data => {
-        console.log(data)
+        const reviewData = {
+            reviewerName: (data.name),
+            reviewerDesignation: (data.designation),
+            reviewerMessage: (data.message),
+            image: (loggedInUser.photo)
+        }
         fetch('http://localhost:5000/review', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data),
+            body: JSON.stringify(reviewData),
         })
             // .then(response => console.log('Success Report:', response))
             .then(res => res.json())
@@ -37,7 +44,7 @@ const Review = () => {
                     <table className="mt-5 mx-auto">
                         <tbody>
                             <tr>
-                                <td className="w-100"><input className="form-control py-3 pr-3" name="name" placeholder="Course Name" {...register("name")} /></td>
+                                <td className="w-100"><input className="form-control py-3 pr-3" name="name" value={loggedInUser.name} {...register("name")} /></td>
                             </tr>
                             <tr>
                                 <td className="w-100"><input className="form-control py-3 pr-3 mt-2" name="designation" placeholder="Designation" {...register("designation")} /></td>

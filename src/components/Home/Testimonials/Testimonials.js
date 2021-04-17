@@ -16,7 +16,7 @@ const Testimonials = () => {
                <div className="section-header text-center">
                    <h5 className="text-primary text-uppercase">Testimonial</h5>
                </div>
-               <div className="card-deck mt-5">
+               <div className="row justify-content-center py-3 px-3">
                     {
                         reviews.map(testimonial => <Testimonial review={testimonial} key={testimonial._id}/>)
                     }

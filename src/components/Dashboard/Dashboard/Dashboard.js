@@ -54,23 +54,23 @@ const Dashboard = () => {
                     <table className="m-auto bg-light">
                         <thead>
                             <tr className="text-center">
-                                <th className="text-dark p-2">Name</th>
-                                <th className="text-dark p-2">Email Address</th>
-                                <th className="text-dark p-2">Course Name</th>
-                                <th className="text-dark p-2">Order Time</th>
-                                <th className="text-dark p-2">Status</th>
-                                <th className="text-dark p-2">Change Status</th>
+                                <th className="text-dark py-2 px-3">Name</th>
+                                <th className="text-dark py-2 px-3">Email Address</th>
+                                <th className="text-dark py-2 px-3">Course Name</th>
+                                <th className="text-dark py-2 px-3">Order Time</th>
+                                <th className="text-dark py-2 px-3">Status</th>
+                                <th className="text-dark py-2 px-3">Change Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             {ordersList.map(list =>
                                 <tr className="mt-3" key={list._id}>
-                                    <td className="text-dark p-2">{loggedInUser.name}</td>
-                                    <td className="text-dark p-2">{loggedInUser.email}</td>
-                                    <td className="text-dark p-2">{list.cName}</td>
-                                    <td className="text-dark p-2">{(new Date(list.orderTime).toDateString('dd/MM/yyyy'))}</td>
-                                    <td className="text-dark p-2">{list.status}</td>
-                                    <td className="text-dark p-2">
+                                    <td className="text-dark py-2 px-3">{loggedInUser.name}</td>
+                                    <td className="text-dark py-2 px-3">{loggedInUser.email}</td>
+                                    <td className="text-dark py-2 px-3">{list.cName}</td>
+                                    <td className="text-dark py-2 px-3">{(new Date(list.orderTime).toDateString('dd/MM/yyyy'))}</td>
+                                    <td className="text-dark py-2 px-3">{list.status}</td>
+                                    <td className="text-dark py-2 px-3">
                                         <Select
                                             defaultValue={selectedOption}
                                             onChange={setSelectedOption}
