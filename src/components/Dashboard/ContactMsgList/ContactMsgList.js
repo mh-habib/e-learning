@@ -8,12 +8,12 @@ const containerStyle = {
 const ContactMsgList = () => {
     const [contactMessages, setContactMessages] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/getContactMessage')
+        fetch('https://protected-inlet-55717.herokuapp.com/getContactMessage')
             .then(res => res.json())
             .then(data => setContactMessages(data))
     }, [])
     const deleteContactMessage = (id) => {
-        fetch(`http://localhost:5000/deleteContactMessage/${id}`, {
+        fetch(`https://protected-inlet-55717.herokuapp.com/deleteContactMessage/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

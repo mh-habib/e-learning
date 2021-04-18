@@ -23,7 +23,7 @@ const Dashboard = () => {
     const handleChange = id => {
         const selectedValue = selectedOption.value;
         
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://protected-inlet-55717.herokuapp.com/updateStatus/${id}`, {
             method: 'PATCH',
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify({selectedValue})
@@ -39,7 +39,7 @@ const Dashboard = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/isAdmin', {
+        fetch('https://protected-inlet-55717.herokuapp.com/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })
@@ -51,7 +51,7 @@ const Dashboard = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/allOrders',{
+        fetch('https://protected-inlet-55717.herokuapp.com/allOrders',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

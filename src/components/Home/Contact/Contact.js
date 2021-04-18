@@ -6,7 +6,7 @@ const Contact = () => {
     const onSubmit = data => {
         console.log(data);
         
-        fetch('http://localhost:5000/contactMessage', {
+        fetch('https://protected-inlet-55717.herokuapp.com/contactMessage', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

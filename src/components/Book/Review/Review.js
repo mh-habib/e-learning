@@ -17,7 +17,7 @@ const Review = () => {
             reviewerMessage: (data.message),
             image: (loggedInUser.photo)
         }
-        fetch('http://localhost:5000/review', {
+        fetch('https://protected-inlet-55717.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

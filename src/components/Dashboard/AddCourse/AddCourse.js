@@ -20,7 +20,7 @@ const AddCourse = () => {
             courseImg: imgURL
         }
 
-        fetch('http://localhost:5000/addCourse', {
+        fetch('https://protected-inlet-55717.herokuapp.com/addCourse', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -13,4 +13,5 @@ This is a sample online service providing application. Using this application so
 ### Restricted admin panel
 ### Used firebase authentication with google account.
  
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Live Site: [https://e-learning-85058.web.app/](https://e-learning-85058.web.app/)
+Live API: [https://protected-inlet-55717.herokuapp.com/](https://protected-inlet-55717.herokuapp.com/)

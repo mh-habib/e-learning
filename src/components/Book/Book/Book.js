@@ -16,7 +16,7 @@ const Book = () => {
         const orderDetail = {...loggedInUser, paymentId, status: 'Pending', orderTime: new Date()};
         // console.log('Order', orderDetail);
 
-        fetch('http://localhost:5000/submitOrder', {
+        fetch('https://protected-inlet-55717.herokuapp.com/submitOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
