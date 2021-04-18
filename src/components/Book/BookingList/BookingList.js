@@ -13,7 +13,7 @@ const BookingList = () => {
         fetch(`http://localhost:5000/userOrders?email=${loggedInUser.email}`)
         .then(res => res.json())
         .then(data => setUserOrders(data))
-    },[])
+    },[loggedInUser.email])
     return (
         <div style={containerStyle} className="container-fluid row">
             <div className="col-md-3 col-sm-12 col-12">

@@ -11,5 +11,6 @@ This is a sample online service providing application. Using this application so
 ### Online payment system using strip
 ### Privet routing
 ### Restricted admin panel
+### Used firebase authentication with google account.
  
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

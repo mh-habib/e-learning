@@ -17,7 +17,10 @@ const ServiceDetail = (props) => {
     return (
         
         <div className="card col-md-4 col-lg-3 col-sm-5 m-3 text-center shadow">
-            <img src={courseImg} className="img-size" alt="..." />
+            <div className="inner">
+                <img src={courseImg} className="card-img-top img-size" alt="..." />
+            </div>
+            
             <div className="card-body">
                 <h4 className="card-title">{courseName}</h4>
                 <h5>{courseTeacher}</h5>

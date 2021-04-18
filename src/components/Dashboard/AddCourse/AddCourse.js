@@ -9,7 +9,7 @@ const containerStyle = {
 
 const AddCourse = () => {
     const { register, handleSubmit, errors } = useForm();
-    const [imgURL, setImgURL] = useState(null)
+    const [imgURL, setImgURL] = useState(null);
     const onSubmit = data => {
         // console.log(data)
         const courseData = {

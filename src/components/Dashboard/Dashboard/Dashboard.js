@@ -17,7 +17,7 @@ const options = [
 const Dashboard = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [ordersList, setOrdersList] = useState([]);
-
+    const [isAdmin, setIsAdmin] = useState(false);
     const [selectedOption, setSelectedOption] = useState('');
 
     const handleChange = id => {
@@ -37,11 +37,30 @@ const Dashboard = () => {
 
     };
 
+
     useEffect(() => {
-        fetch('http://localhost:5000/allOrders')
+        fetch('http://localhost:5000/isAdmin', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ email: loggedInUser.email })
+        })
+            .then(res => res.json())
+            .then(data => setIsAdmin(data));
+    }, [loggedInUser.email])
+
+
+
+    useEffect(() => {
+        fetch('http://localhost:5000/allOrders',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({email: loggedInUser.email}),
+        }) 
             .then(res => res.json())
             .then(data => setOrdersList(data))
-    }, [])
+    }, [loggedInUser.email])
 
     return (
         <section>
@@ -59,7 +78,7 @@ const Dashboard = () => {
                                 <th className="text-dark py-2 px-3">Course Name</th>
                                 <th className="text-dark py-2 px-3">Order Time</th>
                                 <th className="text-dark py-2 px-3">Status</th>
-                                <th className="text-dark py-2 px-3">Change Status</th>
+                                {isAdmin && <th className="text-dark py-2 px-3">Change Status</th>}
                             </tr>
                         </thead>
                         <tbody>
@@ -70,14 +89,14 @@ const Dashboard = () => {
                                     <td className="text-dark py-2 px-3">{list.cName}</td>
                                     <td className="text-dark py-2 px-3">{(new Date(list.orderTime).toDateString('dd/MM/yyyy'))}</td>
                                     <td className="text-dark py-2 px-3">{list.status}</td>
-                                    <td className="text-dark py-2 px-3">
+                                    {isAdmin && <td className="text-dark py-2 px-3">
                                         <Select
                                             defaultValue={selectedOption}
                                             onChange={setSelectedOption}
                                             options={options}
                                         />
                                         <button className="btn btn-sm btn-block btn-outline-primary float-left"onClick={ ()=>handleChange(list._id)}>Change</button>
-                                    </td>
+                                    </td>}
                                 </tr>
                             )}
                         </tbody>

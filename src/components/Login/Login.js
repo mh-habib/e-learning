@@ -73,7 +73,7 @@ function Login() {
         })
     }
 
-    if (!newUser, user.email && user.password) {
+    if (!newUser && user.email && user.password) {
       signInWithEmailAndPassword(user.email, user.password)
         .then(res => {
           handleResponse(res, true);
@@ -84,7 +84,7 @@ function Login() {
   }
   const passwordMatcher = (e) => {
     setConfirmPassValue(e.target.value)
-    if (passValue != confirmPassValue) {
+    if (passValue !== confirmPassValue) {
       setIsError('Password not matched!!!');
     }else{
       setIsError('');
