@@ -29,7 +29,7 @@ const ContactMsgList = () => {
                 <Sidebar></Sidebar>
             </div>
             <div className="col-md-8 col-sm-12 col-12">
-                <h1 className="text-primary text-center pt-5 mb-4">Manage Services</h1>
+                <h1 className="text-primary text-center pt-5 mb-4">Manage Contact Message</h1>
                 <table className="m-auto bg-light">
                     <thead>
                         <tr>

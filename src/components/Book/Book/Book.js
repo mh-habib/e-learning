@@ -42,7 +42,7 @@ const Book = () => {
                 <BookingSidebar></BookingSidebar>
             </div>
             <div className="col-md-8 col-sm-12 col-12">
-                <h1 className="text-info text-center pt-5 mb-3">Booking Information</h1>
+                <h1 className="text-primary text-center pt-5 mb-3">Booking Information</h1>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <table className="mt-5 mx-auto">
                         <tbody>

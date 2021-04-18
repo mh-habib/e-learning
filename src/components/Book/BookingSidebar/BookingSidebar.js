@@ -9,7 +9,7 @@ const BookingSidebar = () => {
     return (
         <div className="sidebar d-flex flex-column justify-content-between col-md-12 py-5 px-4" style={{ height: "100vh" }}>
             <ul className="list-unstyled">
-                <li className="mb-5 text-center">
+                <li className="mb-5">
                     <img style={{ height: '25px' }} src={logo} alt="" />
                 </li>
                 <li>

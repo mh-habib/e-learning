@@ -20,8 +20,8 @@ const BookingList = () => {
                 <BookingSidebar></BookingSidebar>
             </div>
             <div className="col-md-8 col-sm-12 col-12">
-                <h1 className="text-info text-center pt-5 mb-3">Hello {loggedInUser.name}</h1>
-                <h5 className="text-secondary text-center mb-5">You Have Submitted {userOrders.length} Orders</h5>
+                <h1 className="text-primary text-center pt-5 mb-3">Hello {loggedInUser.name}</h1>
+                <h5 className="text-dark text-center mb-5">You Have Submitted {userOrders.length} Orders</h5>
                 <table className="m-auto bg-light">
                     <thead>
                         <tr>
